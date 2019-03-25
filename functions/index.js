@@ -76,7 +76,7 @@ exports.sendResetPasswordEmail = functions.https.onCall(async (data, context) =>
     var resetLink = await admin.auth().generatePasswordResetLink(email, actionCodeSettings);
     console.log(resetLink);
 
-    let renderedHtml = await ejs.renderFile('./templates/reset-password.ejs', {resetLink});
+
 
     const mailOptions = {
         from: `${APP_NAME} <noreply@wavepilots.com>`,
