@@ -27,7 +27,6 @@ import { firebaseConfig } from './app.constants';
     CommonModule,
     RouterModule,
 
-    AuthModule,
     HomeModule,
     UsermgmtModule,
     SharedModule,

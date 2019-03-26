@@ -23,7 +23,7 @@
     "angularfire2": "2.0.0-beta.8",
     "core-js": "2.4.1",
     "firebase": "3.7.4",
-    "moment": "^2.24.0",
+    // "moment": "^2.24.0",
     "ng2-bs3-modal": "0.10.4",
     "ng2-ckeditor": "1.1.6",
     "rxjs": "5.1.0",
