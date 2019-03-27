@@ -60,6 +60,13 @@ exports.sendWelcomeEmail = functions.auth.user().onCreate(async (user) => {
 exports.sendByeEmail = functions.auth.user().onDelete(async (user) => {
     console.log(user);
 
+    db.ref(`/users/${uid}/is_deleted`).set(true);
+    db.ref(`/waves/${uid}`).once("value", (snapshot) => {
+        if(snapshot.exists()){
+            db.ref(`/waves/${uid}/is_deleted`).set(true);
+        }
+    });
+
     const email = user.email; // The email of the user.
     const uid = user.uid;
     
